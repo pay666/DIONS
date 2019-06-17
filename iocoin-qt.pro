@@ -4,21 +4,21 @@
         QT += widgets # QApplication is required to get native styling with QtQuickControls
     }
     
-    # linux-g++ {
-    #isEmpty(PREFIX) {
-    #    PREFIX = /usr
-    #}
-    #target.path = $$PREFIX/bin
+     linux-g++ {
+    isEmpty(PREFIX) {
+        PREFIX = /usr
+    }
+    target.path = $$PREFIX/bin
 
-    #desktop.path = $$PREFIX/share/applications/
-    #desktop.files += iocoin-qt.desktop
-    #icon512.path = $$PREFIX/share/icons/hicolor/256x256/apps
-    #icon512.files += icon.png
+    desktop.path = $$PREFIX/share/applications/
+    desktop.files += iocoin-qt.desktop
+    icon256.path = $$PREFIX/share/icons/hicolor/256x256/apps
+    icon256.files += icon.png
 
-    #INSTALLS += icon256
-    #INSTALLS += desktop
-    #INSTALLS += target
-    #}
+    INSTALLS += icon256
+    INSTALLS += desktop
+    INSTALLS += target
+    }
     
 TEMPLATE = app
 TARGET = iocoin-qt
@@ -30,16 +30,7 @@ CONFIG += thread
 CONFIG += c++11
 CONFIG += qtquickcompiler
 
-SOURCES += \
-    src/main.cpp \
-    src/post.cpp \
-    src/tinytinyrss.cpp \
-    src/tinytinyrsslogin.cpp
-
-RESOURCES += \
-    html/html.qrc \
-    qml/qml.qrc \
-    
+   
 !win32 {
     CONFIG += static
 }

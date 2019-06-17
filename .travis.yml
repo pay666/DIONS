@@ -4,7 +4,6 @@ sudo: require
 dist: trusty
 
 before_install:
-  - sudo if $(pkg-config --exists Qt5WebKit) || $(pkg-config --exists QtWebKit) ; then enable qtwebkit
   - sudo add-apt-repository ppa:beineri/opt-qt593-trusty -y
   - sudo apt-get update -qq
 

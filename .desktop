@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Name=iocoinqt
+Name=iocoin-qt
 Comment=IOCoinQt Wallet
 Exec=iocoinqt
 Icon=icon.png

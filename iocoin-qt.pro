@@ -5,11 +5,11 @@ linux-g++ {
     target.path = $$PREFIX/bin
 
     desktop.path = $$PREFIX/share/applications/
-    desktop.files += mlvapp.desktop
-    icon512.path = $$PREFIX/share/icons/hicolor/512x512/apps
-    icon512.files += RetinaIMG/MLVAPP.png
+    desktop.files += iocoin-qt.desktop
+    icon512.path = $$PREFIX/share/icons/hicolor/256x256/apps
+    icon512.files += icon.png
 
-    INSTALLS += icon512
+    INSTALLS += icon256
     INSTALLS += desktop
     INSTALLS += target
 }

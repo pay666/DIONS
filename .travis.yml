@@ -12,8 +12,9 @@ install:
   - source /opt/qt*/bin/qt*-env.sh
 
 script:
-  - qmake=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
-  #- qmake CONFIG+=release PREFIX=/usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf
+  - qmake CONFIG+=release PREFIX=/usr/lib/x86_64-linux-gnu/qt-default/qtchooser/default.conf
+  - qmake CONFIG+=release PREFIX=/usr
+  - qmake=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake iocoin-qt.pro
   - make -j$(nproc)
   - make INSTALL_ROOT=appdir -j$(nproc) install ; find appdir/
   - wget -c -nv "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage"

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=IOCoinQt Wallet
+Comment=IocoinQt Wallet
+Exec=iocoinqt
+Icon=icon.png
+Categories=Office;

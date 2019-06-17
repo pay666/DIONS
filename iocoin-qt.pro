@@ -1,18 +1,25 @@
-linux-g++ {
-    isEmpty(PREFIX) {
-        PREFIX = /usr
+    requires(contains(QT_CONFIG, accessibility))
+
+    qtHaveModule(widgets) {
+        QT += widgets # QApplication is required to get native styling with QtQuickControls
     }
-    target.path = $$PREFIX/bin
+    
+    # linux-g++ {
+    #isEmpty(PREFIX) {
+    #    PREFIX = /usr
+    #}
+    #target.path = $$PREFIX/bin
 
-    desktop.path = $$PREFIX/share/applications/
-    desktop.files += iocoin-qt.desktop
-    icon512.path = $$PREFIX/share/icons/hicolor/256x256/apps
-    icon512.files += icon.png
+    #desktop.path = $$PREFIX/share/applications/
+    #desktop.files += iocoin-qt.desktop
+    #icon512.path = $$PREFIX/share/icons/hicolor/256x256/apps
+    #icon512.files += icon.png
 
-    INSTALLS += icon256
-    INSTALLS += desktop
-    INSTALLS += target
-}
+    #INSTALLS += icon256
+    #INSTALLS += desktop
+    #INSTALLS += target
+    #}
+    
 TEMPLATE = app
 TARGET = iocoin-qt
 VERSION = 3.0.1.0
@@ -20,6 +27,19 @@ INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
+CONFIG += c++11
+CONFIG += qtquickcompiler
+
+SOURCES += \
+    src/main.cpp \
+    src/post.cpp \
+    src/tinytinyrss.cpp \
+    src/tinytinyrsslogin.cpp
+
+RESOURCES += \
+    html/html.qrc \
+    qml/qml.qrc \
+    
 !win32 {
     CONFIG += static
 }

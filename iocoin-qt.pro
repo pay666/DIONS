@@ -1,7 +1,7 @@
     requires(contains(QT_CONFIG, accessibility))
 
     qtHaveModule(widgets) {
-        QT += widgets webenginewidgets webkitwidgets # QApplication is required to get native styling with QtQuickControls
+        QT += widgets webenginewidgets # QApplication is required to get native styling with QtQuickControls
     }
     
      linux-g++ {

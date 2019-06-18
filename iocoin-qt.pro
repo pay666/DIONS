@@ -1,7 +1,7 @@
     requires(contains(QT_CONFIG, accessibility))
 
     qtHaveModule(widgets) {
-        QT += webenginewidgets # QApplication is required to get native styling with QtQuickControls
+        QT += widgets webenginewidgets # QApplication is required to get native styling with QtQuickControls
     }
     
      linux-g++ {
@@ -36,11 +36,11 @@ CONFIG += qtquickcompiler
 }
 
 greaterThan(QT_MAJOR_VERSION, 4) {
-    QT += webenginewidgets
+    QT += widgets webenginewidgets
     DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0
 }
 
-QT += webenginewidgets
+QT += widgets webenginewidgets
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt

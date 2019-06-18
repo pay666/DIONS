@@ -1,7 +1,7 @@
     requires(contains(QT_CONFIG, accessibility))
 
     qtHaveModule(widgets) {
-        QT += widgets webenginewidgets # QApplication is required to get native styling with QtQuickControls
+        QT += widgets # QApplication is required to get native styling with QtQuickControls
     }
     
      linux-g++ {
@@ -25,6 +25,7 @@ TARGET = iocoin-qt
 VERSION = 3.0.1.0
 INCLUDEPATH += src src/json src/qt
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
+QT += qml quick webenginewidgets webengine
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += c++11

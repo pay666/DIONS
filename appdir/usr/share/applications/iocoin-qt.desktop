@@ -2,6 +2,6 @@
 Type=Application
 Name=iocoin-qt
 Comment=IOCoinQt Wallet
-Exec=/usr/bin/iocoin-qt
-Icon=/usr/share/icons/hicolor/256x256/apps/icon
+Exec=iocoin-qt
+#Icon=/usr/share/icons/hicolor/256x256/apps/icon
 Categories=Network;

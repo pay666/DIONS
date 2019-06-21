@@ -2,6 +2,6 @@
 Type=Application
 Name=iocoin-qt
 Comment=IOCoinQt Wallet
-Exec=iocoinqt
+Exec=iocoin-qt
 Icon=icon.png
 Categories=Network;
